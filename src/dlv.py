@@ -90,7 +90,7 @@ def dlv_func(thetaij, gammaij, kij, tj, t, s, spxw_call_clean):
     dlvij.append(dlvj)
   return np.asarray(dlvij)
 
-directory_txt = os.fsencode('/data/txt/')
+directory_txt = os.fsencode('./data/txt/')
 DF_list = list()
 spxw_call_data = 0;
     
@@ -99,7 +99,7 @@ for file in os.listdir(directory_txt):
   if filename.endswith(".txt"):
     date = filename[-14:-4]
     print(date)
-    data = pd.read_csv('/data/txt/' + filename, sep="\t")
+    data = pd.read_csv('./data/txt/' + filename, sep="\t")
     EQT = pd.DataFrame(data)
     # Import and Create Fields
     df = EQT[['okey_tk', 
